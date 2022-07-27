@@ -492,11 +492,74 @@ Logical properties and values (flow relative versions of the physical properties
 
 
   Block Formatting Context
-  
+
   when you use a value of overflow such as scroll or auto, you create a Block Formatting Context
   The content of the box that you have changed the value of overflow for acquires a self-contained layout. Content outside the container cannot poke into the container, and nothing can poke out of that container into the surrounding layout. This enables scrolling behavior
 
 
-  Css values
+CSS values and units
+
+  Lengths
+
+    The numeric type you will come across most frequently is <length>. For example, 10px (pixels) or 30em. There are two types of lengths used in CSS — relative and absolute.
+    Absolute length units
+
+      they are not relative to anything else, and are generally considered to always be the same size.
+          Unit	Name	Equivalent to
+          cm	Centimeters	1cm = 37.8px = 25.2/64in
+          mm	Millimeters	1mm = 1/10th of 1cm
+          Q	Quarter-millimeters	1Q = 1/40th of 1cm
+          in	Inches	1in = 2.54cm = 96px
+          pc	Picas	1pc = 1/6th of 1in
+          pt	Points	1pt = 1/72nd of 1in
+          px	Pixels	1px = 1/96th of 1in
+
+    
+    <table>
+  <thead>
+    <tr>
+      <th>Unit</th>
+      <th>Name</th>
+      <th>Equivalent to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>cm</code></td>
+      <td>Centimeters</td>
+      <td>1cm = 37.8px = 25.2/64in</td>
+    </tr>
+    <tr>
+      <td><code>mm</code></td>
+      <td>Millimeters</td>
+      <td>1mm = 1/10th of 1cm</td>
+    </tr>
+    <tr>
+      <td><code>Q</code></td>
+      <td>Quarter-millimeters</td>
+      <td>1Q = 1/40th of 1cm</td>
+    </tr>
+    <tr>
+      <td><code>in</code></td>
+      <td>Inches</td>
+      <td>1in = 2.54cm = 96px</td>
+    </tr>
+    <tr>
+      <td><code>pc</code></td>
+      <td>Picas</td>
+      <td>1pc = 1/6th of 1in</td>
+    </tr>
+    <tr>
+      <td><code>pt</code></td>
+      <td>Points</td>
+      <td>1pt = 1/72nd of 1in</td>
+    </tr>
+    <tr>
+      <td><code>px</code></td>
+      <td>Pixels</td>
+      <td>1px = 1/96th of 1in</td>
+    </tr>
+  </tbody>
+</table>
 
 
