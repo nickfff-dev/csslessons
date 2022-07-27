@@ -20,44 +20,44 @@ the following steps apply to the cascading algorithm:
 
   user agent normal
 
-    1 first layer
-    2 second layer
-    3 third layer
-    4 unlayered style
+      1. first layer
+      2. second layer
+      3. third layer
+      4. unlayered style
 
   user aggent important
 
-    0. unlayered style
-    1. third layer
+      0. unlayered style
+      1. third layer
       2. second layer
       3. first layer
       
   user normal
 
-    1. first layer
-    2. second layer
-    3. third layer
-    4. unlayered style
+      1. first layer
+      2. second layer
+      3. third layer
+      4. unlayered style
 
   user important
 
       0. unlayered style
-    1. third layer
+      1. third layer
       2. second layer
       3. first layer
 
   author normal
 
-    1. first layer
-    2. second layer
-    3. third layer
-    4. unlayered style
-    5. inline style
+      1. first layer
+      2. second layer
+      3. third layer
+      4. unlayered style
+      5. inline style
 
   author important
 
       0. unlayered style
-    1. third layer
+      1. third layer
       2. second layer
       3. first layer
       4. inline style
@@ -200,35 +200,36 @@ Specifity between layers doesn't matter, but specificity within a single layer s
 
     Precedence Order,	Style Origin,	Importance
 
-    1	user-agent - first declared layer	normal
-    user-agent - last declared layer
-    user-agent - unlayered styles
+        user-agent - first declared layer	normal
+        user-agent - last declared layer
+        user-agent - unlayered styles
 
-    2	user - first declared layer	normal
-    user - last declared layer
-    user - unlayered styles
+   
+        user - first declared layer	normal
+        user - last declared layer
+        user - unlayered styles
 
-    3	author - first declared layer	normal
-    author - last declared layer
-    author - unlayered styles
-    inline style
+        author - first declared layer	normal
+        author - last declared layer
+        author - unlayered styles
+        inline style
 
-    4	animations	
+        animations	
 
-    5	author - unlayered styles	!important
-    author - last declared layer
-    author - first declared layer
-    inline style
+        author - unlayered styles	!important
+        author - last declared layer
+        author - first declared layer
+        inline style
 
-    6	user - unlayered styles	!important
-    user - last declared layer
-    user - first declared styles
+      	user - unlayered styles	!important
+        user - last declared layer
+        user - first declared styles
 
-    7	user-agent - unlayered styles	!important
-    user-agent - last declared layer
-    user-agent - first declared styles
+        user-agent - unlayered styles	!important
+        user-agent - last declared layer
+        user-agent - first declared styles
 
-    8	transitions	
+    	  transitions	
 
 
 Resetting styles
