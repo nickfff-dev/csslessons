@@ -125,9 +125,10 @@ property values for controlling inheritance
 
   revert
 
-  resets the proprty vlue to the browser default styling
+    resets the proprty vlue to the browser default styling
 
   revert-layer
+  
     reverts the property value to the value of the previous layer of the cascade
 
   unset
