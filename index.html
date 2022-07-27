@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+<body>
+  <p id="addSpecificity">
+    A paragraph with a border and background
+  </p>
+  <div id="outer" class="container">
+    <div id="inner" class="container">
+        <ul>
+            <li class="nav"><a href="#">One</a></li>
+            <li class="nav"><a href="#">Two</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+  <ul>
+    <li>Default <a href="#">link</a> color</li>
+    <li class="my-class-1">sets the color of the a element inside it to inherit from the body <a href="#">link</a> color</li>
+    <li class="my-class-2">   uses the initial value of the property (in this case black) and not the browser default for links <a href="#">link</a> color</li>
+    <li class="my-class-3">unset it to use the first layer cascade style which is thebody <a href="#">link</a> color</li>
+</ul>
+<blockquote>
+  <p>This blockquote is styled</p>
+</blockquote>
+
+<blockquote class="fix-this">
+  <p>This blockquote is not styled</p>
+</blockquote>
+<div class="box"></div>
+  </body>
+</html>

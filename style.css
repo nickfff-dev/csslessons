@@ -1,0 +1,140 @@
+
+
+html {
+  box-sizing: content-box;
+}
+*, *::before, *::after {
+  box-sizing: content-box;
+}
+
+body {
+  color: green;
+}
+        
+.my-class-1 a {
+  color: inherit;
+}
+        
+.my-class-2 a {
+  color: initial;
+}
+        
+.my-class-3 a {
+  color: unset;
+}
+a { color: red; }
+
+
+
+blockquote {
+  background-color: red;
+  border: 2px solid green;
+}
+      
+.fix-this {
+  all: unset;
+}
+
+
+#outer a{
+  background-color: red;
+}
+
+
+
+#outer #inner a{
+  background-color:blue;
+
+}
+
+
+#outer div ul li a{
+  color: yellow;
+}
+
+
+#outer div ul .nav a{
+  color: white;
+}
+
+
+div div li:nth-child(2) a:hover{
+  border: 10px solid black;
+}
+
+
+div li:nth-child(2) a:hover{
+  border: 10px dashed black
+}
+div div .nav:nth-child(2) a:hover {
+  border: 10px double black;
+}
+
+
+a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}   
+
+@layer firstLayer, secondLayer, thirdLayer;
+
+
+p{
+  background-color: red;
+  color: grey !important;
+  border: 5px inset purple;
+}
+
+
+p#addSpecificity{
+  border-style: solid !important;
+}
+
+@layer firstLayer {
+  #addSpecificity{
+    background-color: blue ;
+    color: white !important;
+    border-width: 5px;
+    border-style: dashed !important
+  }
+
+}
+
+
+@layer secondLayer {
+  p#addSpecificity { 
+    background-color: green;
+    color: orange !important;
+    border-width: 10px;
+    border-style: dotted !important;
+  }
+}   
+
+
+
+
+
+ a::first-letter {
+    color: red !important ;
+  }
+
+
+a::after{
+  content: " ➥";
+  word-break:break-word;
+  
+}
