@@ -515,51 +515,5 @@ CSS values and units
           px	Pixels	1px = 1/96th of 1in
 
     
-    <table>
-  <thead>
-    <tr>
-      <th>Unit</th>
-      <th>Name</th>
-      <th>Equivalent to</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>cm</code></td>
-      <td>Centimeters</td>
-      <td>1cm = 37.8px = 25.2/64in</td>
-    </tr>
-    <tr>
-      <td><code>mm</code></td>
-      <td>Millimeters</td>
-      <td>1mm = 1/10th of 1cm</td>
-    </tr>
-    <tr>
-      <td><code>Q</code></td>
-      <td>Quarter-millimeters</td>
-      <td>1Q = 1/40th of 1cm</td>
-    </tr>
-    <tr>
-      <td><code>in</code></td>
-      <td>Inches</td>
-      <td>1in = 2.54cm = 96px</td>
-    </tr>
-    <tr>
-      <td><code>pc</code></td>
-      <td>Picas</td>
-      <td>1pc = 1/6th of 1in</td>
-    </tr>
-    <tr>
-      <td><code>pt</code></td>
-      <td>Points</td>
-      <td>1pt = 1/72nd of 1in</td>
-    </tr>
-    <tr>
-      <td><code>px</code></td>
-      <td>Pixels</td>
-      <td>1px = 1/96th of 1in</td>
-    </tr>
-  </tbody>
-</table>
-
+   
 
