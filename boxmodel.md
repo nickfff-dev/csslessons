@@ -129,7 +129,7 @@ In a vertical-rl writing mode the block direction runs from right to left.
 
 block dimension is always the direction blocks are displayed on the page in the writing mode in use
 inline dimension is always the direction a sentence flows.
-    ![alt text](horizontal-tb.png)
+    ![alt text](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/horizontal-tb.png)
 
 Logical properties and values (flow relative versions of the physical properties)
 two boxes again — one with a horizontal-tb writing mode and one with vertical-rl. I have given both of these boxes a width. You can see that when the box is in the vertical writing mode, it still has a width, and this is causing the text to overflow.
