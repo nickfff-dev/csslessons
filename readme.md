@@ -521,7 +521,54 @@ CSS values and units
           pc	Picas	1pc = 1/6th of 1in
           pt	Points	1pt = 1/72nd of 1in
           px	Pixels	1px = 1/96th of 1in
+      
+      Relative length units
 
-    
+      are relative to something else, perhaps the size of the parent element's font, or the size of the viewport.
+          Unit	Relative to
+          em	Font size of the parent, in the case of typographical properties like font-size, and font size of the element itself, in the case of other properties like width
+          ex	x-height of the element's font.
+          ch	The advance measure (width) of the glyph "0" of the element's font.
+          rem	The root element's font size.
+          lh	Line height of the element.
+          rlh	Line height of the root element. When used on the font-size or line-height properties of the root element, it refers to the properties' initial value.
+          vw	1% of the viewport's width.
+          vh	1% of the viewport's height.
+          vmin	1% of the viewport's smaller dimension.
+          vmax	1% of the viewport's larger dimension.
+          vb	1% of the size of the initial containing block in the direction of the root element's block axis.
+          vi	1% of the size of the initial containing block in the direction of the root element's inline axis
+
+
+ems and rems
+
+     the em unit means "my parent element's font-size" in the case of typography. The <li> elements inside a <ul> parent with a font-size of 1.3ems take their sizing from their parent (1.3 x parentfontsize). So each successive level of nesting gets progressively larger, as each has its font size set to 1.3em — 1.3 times its parent's font size.
+     
+     rem unit means "The root element's font-size" (rem stands for "root em"). The <li> elements inside the <ul> with a font-size of 1.3 rem and html root of 16px take their sizing from the root element (<html> i.e 16px x 1.3). This means that each successive level of nesting does not keep getting larger.
    
+Percentages
 
+    percentages is that they are always set relative to some other value
+    if you set an element's font-size as a percentage, it will be a percentage of the font-size of the element's parent.
+    If you use a percentage for a width value, it will be a percentage of the width of the parent.
+
+
+Color
+    The standard color system available in modern computers supports 24-bit colors which allows the display of about 16.7 million distinct colors via a combination of different red, green and blue channels with 256 different values per channel (256 x 256 x 256 = 16,777,216)
+
+    Hexadecimal RGB values
+
+        Each pair of values represents one of the channels — red, green and blue
+        each hexa color value  can take one of 16 values between 0 and f (which represents 15) that total up to 256
+
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f
+        256 156 0
+        #ff9c00
+
+
+
+Functions
+
+  calc()
+  
+     using calc() to make the box 20% + 100px wide.The 20% is calculated from the width of the parent container
