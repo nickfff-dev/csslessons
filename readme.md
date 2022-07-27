@@ -128,7 +128,7 @@ property values for controlling inheritance
     resets the proprty vlue to the browser default styling
 
   revert-layer
-  
+
     reverts the property value to the value of the previous layer of the cascade
 
   unset
@@ -163,11 +163,13 @@ Elements:
   
   Inline styles, that is, the style declaration inside a <style> attribute take precedence over all normal styles, no matter the specificity.
 
-There are three factors to consider, listed here in increasing order of importance. Later ones overrule earlier ones
+    There are three factors to consider, listed here in increasing order of importance. Later ones overrule earlier ones
 
-  Source order
-  Specificity
-  Importance
+      Source order
+
+      Specificity
+      
+      Importance
 
 
 The effect of CSS location
@@ -222,14 +224,14 @@ Order of overriding declarations
         author - first declared layer
         inline style
 
-      	user - unlayered styles	!important
+        user - unlayered styles	!important
         user - last declared layer
         user - first declared styles
 
         user-agent - unlayered styles	!important
         user-agent - last declared layer
         user-agent - first declared styles
-
+        
     	  transitions	
 
 
