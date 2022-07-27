@@ -93,7 +93,7 @@ CSS declarations come from different origin types.
     Styles declared outside of a layer are treated as being part of an anonymous last declared layer.
 
 
-Only CSS property/value pair declarations participate in the cascade. This means that at-rules containing entities other than declarations, such as a @font-face rule containing descriptors, don't participate in the cascade.
+      Only CSS property/value pair declarations participate in the cascade. This means that at-rules containing entities other than declarations, such as a @font-face rule containing descriptors, don't participate in the cascade.
 
 
 
@@ -190,13 +190,13 @@ Order of overriding declarations
 
 
 
-When you declare CSS in cascade layers, the order of precedence is determined by the order in which the layers are declared
-CSS styles declared outside of any layer are combined together, in the order in which those styles are declared, into an unnamed layer, as if it were the last declared layer.
-later layers take precedence over earlier defined layers except for the important declarations, which take precedence over all other declarations.
+      When you declare CSS in cascade layers, the order of precedence is determined by the order in which the layers are declared
+      CSS styles declared outside of any layer are combined together, in the order in which those styles are declared, into an unnamed layer, as if it were the last declared layer.
+      later layers take precedence over earlier defined layers except for the important declarations, which take precedence over all other declarations.
 
-When you have multiple style blocks in different layers providing competing values for a property on a single element
-the layer in which the styles are declared determine the precedence
-Specifity between layers doesn't matter, but specificity within a single layer still does.
+      When you have multiple style blocks in different layers providing competing values for a property on a single element
+      the layer in which the styles are declared determine the precedence
+      Specifity between layers doesn't matter, but specificity within a single layer still does.
 
     Precedence Order,	Style Origin,	Importance
 
@@ -287,9 +287,8 @@ SELECTORS
     the ~ combinator is used to select siblings of an element, even if they are not directly adjacent to the element itself.
 
 
-  trageting classes on particluar elements use the type.class notation
+      trageting classes on particluar elements use the type.class notation
 
-  targeting elements that have more than one class appplied
 
 
   targeting elements by attribute
@@ -305,7 +304,7 @@ SELECTORS
     li[class$="-box"] selects all the list items that have the class attribute set to a value that ends with "-box"
     li[class*="-box"] selects all the list items that have the class attribute set to a value that contains "-box" anywhere in the value
 
-  Element indices are 1-based.
+      Element indices are 1-based.
 
 
 
@@ -430,13 +429,13 @@ display: inline-block
     padding, margin, and border will cause other elements to be pushed away from the box.
     It does not, however, break onto a new line,
 
-  for example a span with a width height padding and border appllied to it
-  the height and width are ignored
-  the vertical margin padding and border apply but do not make the sorrounding items respect the width and height of the span
-  the horizontal margin padding and border apply and make the surrounding items respect horizontal space
-  if you add inline block the item doesnt break to ane wline but its vertical boder margin and padding apply and make the surrounding items respect the height of the span
+      for example a span with a width height padding and border appllied to it
+      the height and width are ignored
+      the vertical margin padding and border apply but do not make the sorrounding items respect the width and height of the span
+      the horizontal margin padding and border apply and make the surrounding items respect horizontal space
+      if you add inline block the item doesnt break to ane wline but its vertical boder margin and padding apply and make the surrounding items respect the height of the span
 
-  when padding of an inline element appears to overlap the border of the parent block set the display of the element to inline-blockso that its vertical space is respected
+      when padding of an inline element appears to overlap the border of the parent block set the display of the element to inline-blockso that its vertical space is respected
 
   <img  href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model-devtools.png"/>
 
@@ -459,11 +458,11 @@ display: inline-block
 
 
 
-When we switch the writing mode, we are changing which direction is block and which is inline.
+    When we switch the writing mode, we are changing which direction is block and which is inline.
 
-  In a horizontal-tb writing mode the block direction runs from top to bottom;
-  In a vertical-lr writing mode the block direction runs from left to right;
-  In a vertical-rl writing mode the block direction runs from right to left.
+      In a horizontal-tb writing mode the block direction runs from top to bottom;
+      In a vertical-lr writing mode the block direction runs from left to right;
+      In a vertical-rl writing mode the block direction runs from right to left.
 
   block dimension is always the direction blocks are displayed on the page in the writing mode in use
   inline dimension is always the direction a sentence flows.
