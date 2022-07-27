@@ -231,7 +231,7 @@ Order of overriding declarations
         user-agent - unlayered styles	!important
         user-agent - last declared layer
         user-agent - first declared styles
-        
+
     	  transitions	
 
 
@@ -252,16 +252,21 @@ Resetting styles
 SELECTORS
 
   ID 
+
   CLASSES
+
   TYPE/ELEMENTS
+
   PSEUDO-CLASSES selects elements that are in a specific state,
+
   PSEUDO-ELEMENTS style part of an element other than the element itself
+
   universal selector *
 
 
-  article :first-child selects all the first children of the article element
+      article :first-child selects all the first children of the article element
 
-  article:first-child selects any article element that is the first child of its parent
+      article:first-child selects any article element that is the first child of its parent
 
   Child combinator >
 
