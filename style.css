@@ -1,14 +1,9 @@
 
 
-html {
-  box-sizing: content-box;
-}
-*, *::before, *::after {
-  box-sizing: content-box;
-}
-
 body {
   color: green;
+  margin: 0 10%;
+  padding: 0 10%;
 }
         
 .my-class-1 a {
@@ -90,7 +85,7 @@ li {
   list-style-type: none;
 }   
 
-@layer firstLayer, secondLayer, thirdLayer;
+@layer  thirdLayer, firstLayer, secondLayer ;
 
 
 p{
@@ -135,6 +130,14 @@ p#addSpecificity{
 
 a::after{
   content: " ➥";
-  word-break:break-word;
+  word-wrap: break-word;
   
+}
+.box{
+   max-inline-size: 300px;
+  margin: 10%;
+  padding: 10%;
+
+ 
+  border: 1px solid black;
 }

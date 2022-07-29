@@ -1,8 +1,7 @@
 cascading
 
-  cascade is an algorithm that defines how user agents combine property values originating from different sources.
-  the origin, cascade layer of the css property and the order of css rules matter
-  The cascade defines the origin and layer that takes precedence when declarations in more than one origin or cascade layer set a value for a property on an element.
+  cascade is an algorithm that defines how user agents combine property values originating from different sources.The cascade order is based on origin type.The cascade within each origin type is based on the declaration order of cascade layers within that type
+  
 
 
 the following steps apply to the cascading algorithm:
@@ -15,7 +14,7 @@ the following steps apply to the cascading algorithm:
 
 2. Origin and importance: 
 
-  Then it sorts these rules according to their importance, that is, whether or not they are followed by !important, and by their origin i.e user-agent, author, user
+  Then it sorts these rules according to their importance, that is, whether or not they are followed by !important, and by their origin i.e user-agent, author, user.  Important styles declared outside of any cascade layer have lower precedence than those declared as part of a layer.Important values that come in early layers have precedence over important styles declared in subsequent cascade layers.
 
 
   user agent normal
@@ -25,7 +24,7 @@ the following steps apply to the cascading algorithm:
       3. third layer
       4. unlayered style
 
-  user aggent important
+  user agent important
 
       0. unlayered style
       1. third layer
@@ -65,7 +64,8 @@ the following steps apply to the cascading algorithm:
 
 3. Specificity:
 
-    In case of equality within an origin, the specificity of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
+    In case of equality within an origin, and same layer the specificity of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
+
 
 4.  In the origin with precedence,
 
@@ -98,7 +98,7 @@ CSS declarations come from different origin types.
 
 
 
-two rules from same cascade layer/origin with same specificity(weighgt/selector) the one thats is applied last(higher order) will be used
+two rules from same cascade layer/origin with same specificity(weight/selector) the one thats is applied last(higher order) will be used
 Source order
 
 specificity
@@ -106,8 +106,10 @@ specificity
   is the algorithm the browser uses to determine which property value is applied to an element
   e.g multiple style blocks with different selectors applying same value to an element(higher specificity)
   specificity will determine which selectors property value wil be applied 
+  non-layered normal styles take precedence over layered normal styles, no matter the specificity
+  layered important styles take precedence over non-layered important styles, no matter the specificity
 
-
+  
 inheritance
 
   some property values applied to a parent element are automatically inherited by their chidren elements and some arent 
@@ -241,7 +243,7 @@ Resetting styles
 
     all lets you opt to immediately restore all properties to:
 
-      1. initial (default) state 
+      1. initial (default) state  
       2. a specific origin (the user-agent stylesheet, the author stylesheet, or the user stylesheet unset
       3. the state inherited from the previous level of the cascade  revert layer
 
@@ -291,7 +293,7 @@ SELECTORS
   General sibling combinator
 
     select siblings of an element even if they are not directly adjacent to the element itself.
-    article ~ p selects all the incidences of p that are  that come anywhere after img element and may not be immediate siblings
+    article ~ p selects all the incidences of p that are  anywhere after img element and may not be immediate siblings
     the ~ combinator is used to select siblings of an element, even if they are not directly adjacent to the element itself.
 
 
@@ -417,7 +419,7 @@ Margin collapsing occurs in three basic cases:
 
 Borders
 
-    The border is drawn between the margin and the padding of a box. If you are using the standard box model, the size of the border is added to the width and height of the box. If you are using the alternative box model then the size of the border makes the content box smaller as it takes up some of that available width and height.
+    The border is drawn between the margin and the padding of a box. If you are using the standard box model, the size of the border is added to the width and padding of the box. If you are using the alternative box model then the size of the border makes the content box smaller as it takes up some of that available width and height.
 
 
 
@@ -433,7 +435,7 @@ display: inline-block
   special value of display, which provides a middle ground between inline and block
   use it if you do not want an item to break onto a new line but you want its height and width to be respected
   unlike inline
-  The width and height properties are respected.
+    The width and height properties are respected.
     padding, margin, and border will cause other elements to be pushed away from the box.
     It does not, however, break onto a new line,
 
@@ -441,11 +443,11 @@ display: inline-block
       the height and width are ignored
       the vertical margin padding and border apply but do not make the sorrounding items respect the width and height of the span
       the horizontal margin padding and border apply and make the surrounding items respect horizontal space
-      if you add inline block the item doesnt break to ane wline but its vertical boder margin and padding apply and make the surrounding items respect the height of the span
+      if you add inline block the item doesnt break to ane wline but its vertical border margin and padding apply and make the surrounding items respect the height of the span
 
-      when padding of an inline element appears to overlap the border of the parent block set the display of the element to inline-blockso that its vertical space is respected
+      when padding of an inline element appears to overlap the border of the parent block set the display of the element to inline-block so that its vertical space is respected
 
-  <img  href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model-devtools.png"/>
+        ![box-model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model-devtools.png)
 
 
   A writing mode in CSS refers to whether the text is running horizontally or vertically. The writing-mode  property lets us switch from one writing mode to another.
@@ -455,11 +457,16 @@ display: inline-block
     a writing mode that is written horizontally and block direction from the top of the page to the bottom of the page. 
     block-top to bottom inline block-left to right
 
+
+        ![horizontal-writin](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/horizontal-tb.png)
+
   writing-mode: vertical-lr
 
     this is a writing mode that is written vertically and block direction is from left to right. 
     block-left to right inline block-top to bottom
   writing-mode: vertical-rl
+
+      ![left-right](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/vertical.png)
 
     this is a writing mode that is written vertically and  block flows from right to left.
     block-right to left inline top to bottom
@@ -572,3 +579,26 @@ Functions
   calc()
   
      using calc() to make the box 20% + 100px wide.The 20% is calculated from the width of the parent container
+
+Sizing items in CSS
+     you can size by:
+
+     1. Setting a specific size
+
+      give it specific width and height values, and it will now have that size no matter what content is placed into it
+      overflow might be a problem with this
+    
+    2. Using a percentage
+    percentages resolve against the size of the containing block
+    In the case of a box inside another container, if you give the child box a percentage width it will be a percentage of the width of the parent container.When you use margin and padding set in percentages, the value is calculated from the inline size of the containing block(width)
+    have equal-sized margins and padding all around the box.
+
+    3.min- and max- sizes
+
+    a box that might contain a variable amount of content, and you always want it to be at least a certain height, you could set the min-height property on it.The box will always be at least this height, but will then grow taller if there is more content than the box has space for at its minimum height.
+    A common use of max-width is to cause images to scale down if there is not enough space to display them at their intrinsic width while making sure they don't become larger than that width
+    if you were to set width: 100% on an image, it would be 100% of the width of the containing block. if its intrinsic width was smaller than its container, the image would be forced to stretch and become larger, causing it to look pixelated
+    This technique is used to make images responsive, so that when viewed on a smaller device they scale down appropriately.
+    
+    Viewport units
+    The viewport — which is the visible area of your page in the browser you are using to view a site — is the area that the user can see.1vh is equal to 1% of the viewport height, and 1vw is equal to 1% of the viewport width. 
