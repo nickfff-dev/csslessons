@@ -447,7 +447,7 @@ display: inline-block
 
       when padding of an inline element appears to overlap the border of the parent block set the display of the element to inline-block so that its vertical space is respected
 
-        ![box-model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model-devtools.png)
+  ![box-model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model-devtools.png)
 
 
   A writing mode in CSS refers to whether the text is running horizontally or vertically. The writing-mode  property lets us switch from one writing mode to another.
@@ -466,7 +466,7 @@ display: inline-block
     block-left to right inline block-top to bottom
   writing-mode: vertical-rl
 
-      ![left-right](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/vertical.png)
+  ![left-right](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions/vertical.png)
 
     this is a writing mode that is written vertically and  block flows from right to left.
     block-right to left inline top to bottom
