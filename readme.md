@@ -602,3 +602,7 @@ Sizing items in CSS
     
     Viewport units
     The viewport — which is the visible area of your page in the browser you are using to view a site — is the area that the user can see.1vh is equal to 1% of the viewport height, and 1vw is equal to 1% of the viewport width. 
+
+
+
+Use table-layout: fixed to create a more predictable table layout that allows you to easily set column widths by setting width on their headings (<th>).
